@@ -37,7 +37,20 @@ Then target the policy methods you wish to cache:
 ```ruby
 class MyPolicy < ApplicationPolicy
   def view?
-    # maybe perform a query
+    user && record && record.owner == user
+  end
+  cache :view?
+end
+```
+
+Note that you may need to provide a `record` alias to your policy's object:
+
+```ruby
+class PostPolicy < ApplicationPolicy
+  alias_method :record, :post
+
+  def view?
+    user && post && post.poster == user
   end
   cache :view?
 end
