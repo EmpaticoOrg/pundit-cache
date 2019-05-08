@@ -1,5 +1,7 @@
 # Pundit::Cache
 
+[![Gem](https://img.shields.io/gem/v/pundit-cache.svg)](https://rubygems.org/gems/pundit-cache)[![Travis (.org)](https://img.shields.io/travis/empaticoorg/pundit-cache.svg)](https://travis-ci.org/EmpaticoOrg/pundit-cache)
+
 Caches your pundit policy results in local memory during a single request. This is useful when your
 policy checks involve queries and may run against multiple copies of the same record during a
 response.
