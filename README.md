@@ -24,7 +24,7 @@ Or install it yourself as:
 
 Add to your policy classes:
 
-```
+```ruby
 class ApplicationPolicy
   extend PunditCache
 end
@@ -32,7 +32,7 @@ end
 
 Then target the policy methods you wish to cache:
 
-```
+```ruby
 class MyPolicy < ApplicationPolicy
   def view?
     # maybe perform a query
