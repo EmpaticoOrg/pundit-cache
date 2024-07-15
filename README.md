@@ -28,7 +28,7 @@ Add to your policy classes:
 
 ```ruby
 class ApplicationPolicy
-  extend PunditCache
+  extend Pundit::Cache
 end
 ```
 
